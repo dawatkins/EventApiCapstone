@@ -6,6 +6,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Events</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/spacelab/bootstrap.min.css" />
 </head>
 <body>
 	<div class="container">
@@ -23,10 +25,10 @@
 				<c:forEach items="${events}" var="event">
 					<tr>
 						<td>${event.name}</td>
-						<td>${event.Dates.startDate}</td>
-						<td>${event.EventsEmbedded.Venue.name}</td>
+						<td>${event.date.startDate.localDate}</td>
+						<%-- <td>${event.EventsEmbedded.Venue.name}</td>
 						<td>${event.EventsEmbedded.Venue.City.name}</td>
-						<td>${event.EventsEmbedded.Venue.State.name}</td>
+						<td>${event.EventsEmbedded.Venue.State.name}</td> --%>
 						
 					</tr>
 				</c:forEach>
