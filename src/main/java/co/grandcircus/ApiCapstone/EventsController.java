@@ -11,6 +11,7 @@ public class EventsController {
 	
 	@RequestMapping("/")
 	public ModelAndView showHome() {
+		System.out.println("Test A: I made it here");
 		return new ModelAndView("index", "events", apiService.showAll());
 	}
 }
