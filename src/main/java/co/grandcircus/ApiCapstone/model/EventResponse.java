@@ -1,5 +1,17 @@
 package co.grandcircus.ApiCapstone.model;
 
-public class EventResponse {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class EventResponse {
+	@JsonProperty("_embedded")
+	private Embedded embedded;
+
+	public Embedded getEmbedded() {
+		return embedded;
+	}
+
+	public void setEmbedded(Embedded embedded) {
+		this.embedded = embedded;
+	}
+	
 }
