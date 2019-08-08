@@ -1,5 +1,21 @@
 package co.grandcircus.ApiCapstone.model;
 
-public class EventsEmbedded {
+import java.util.List;
 
+public class EventsEmbedded {
+	private List<Venues> venues;
+
+	public EventsEmbedded() {}
+	
+	public List<Venues> getVenues() {
+		return venues;
+	}
+
+	public void setVenues(List<Venues> venues) {
+		this.venues = venues;
+	}
+
+	
+	
+	
 }
