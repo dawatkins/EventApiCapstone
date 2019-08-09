@@ -1,10 +1,14 @@
 package co.grandcircus.ApiCapstone.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Venues {
 
 	// variable to hold the string for the name of a city from the City class
+	@JsonProperty("city")
 	private City city;
 	// variable to hold the string for the name of a state from the State class
+	@JsonProperty("state")
 	private State state;
 	// actual name of the venue where the event is being hosted
 	private String name;
@@ -38,7 +42,7 @@ public class Venues {
 
 	@Override
 	public String toString() {
-		return "Venues [city=" + city + ", state=" + state + ", name=" + name + "]";
+		return name + " in: " + city + ", " + state;
 	}
 
 }

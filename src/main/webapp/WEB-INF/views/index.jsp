@@ -16,20 +16,15 @@
 				<tr>
 					<th>Name</th>
 					<th>Start Date</th>
-					<th>Venue</th>
-					<th>City</th>
-					<th>State</th>
+					<th>Venue Details</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${events}" var="event">
 					<tr>
 						<td>${event.name}</td>
-						<td>${event.date.startDate.localDate}</td>
-						<%-- <td>${event.EventsEmbedded.Venue.name}</td>
-						<td>${event.EventsEmbedded.Venue.City.name}</td>
-						<td>${event.EventsEmbedded.Venue.State.name}</td> --%>
-						
+						<td>${event.date}</td>
+						 <td>${event.details}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

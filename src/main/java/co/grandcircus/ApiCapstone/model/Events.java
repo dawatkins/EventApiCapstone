@@ -7,9 +7,12 @@ public class Events {
 	private String name;
 	private String id;
 	private String url;
+	@JsonProperty("dates")
 	private Dates date;
 	@JsonProperty("_embedded")
 	private EventsEmbedded details;
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -40,6 +43,11 @@ public class Events {
 	public void setDetails(EventsEmbedded details) {
 		this.details = details;
 	}
+	@Override
+	public String toString() {
+		return "Events [name=" + name + ", id=" + id + ", url=" + url + ", date=" + date + ", details=" + details + "]";
+	}
+	
 	
 	
 	

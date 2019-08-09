@@ -1,6 +1,7 @@
 package co.grandcircus.ApiCapstone.model;
 
 public class City {
+	
 	private String name;
 
 	public String getName() {
@@ -10,4 +11,11 @@ public class City {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
 }
