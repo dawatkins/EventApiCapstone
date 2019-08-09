@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div class="container">
-	<h1><center>Events List</center></h1>
+	<h1 class="text-primary"><center>Events List</center></h1>
 		<table class="table">
-			<thead>
+			<thead class="text-success">
 				<tr>
 					<th>Name</th>
 					<th>Start Date</th>

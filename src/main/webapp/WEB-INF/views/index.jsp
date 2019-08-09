@@ -11,6 +11,8 @@
 </head>
 <body>
 	<div class="container">
+		<h1 class="text-primary">Search Below for Events</h1>
+		<p></p>
 		<form action="/list">
 			<p>
 				Insert a keyword to search by: <input type="text" id="keyword"

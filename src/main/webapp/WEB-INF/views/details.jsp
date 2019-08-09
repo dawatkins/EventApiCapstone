@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>${event[0].name} - Details</h1>
+		<h1 class="text-primary">${event[0].name} - Details</h1>
 		<table class="table">
 			<tr>
 				<th scope="row">Event ID</th>
@@ -30,7 +30,7 @@
 			</tr>
 			<tr>
 				<th scope="row">TicketMaster</th>
-				<td><a href=${ event[0].url }><button>Buy Tickets</button></a></td>
+				<td><a href=${ event[0].url }><button class="btn-success btn">Buy Tickets</button></a></td>
 			</tr>
 			
 		</table>
