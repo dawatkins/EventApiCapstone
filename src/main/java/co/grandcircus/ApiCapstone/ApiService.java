@@ -27,15 +27,44 @@ public class ApiService {
 	
 	public List<Events> showAll(){
 		
-		System.out.println("Test B: I made it here");
+		//System.out.println("Test B: I made it here");
 		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*";
-		System.out.println("Test C: I made it here");
+		//System.out.println("Test C: I made it here");
 		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
 		List<Events> ourList = response.getEmbedded().getEvents();
-		System.out.println(ourList);
+		//System.out.println(ourList);
 		return ourList;
 	}
 	
-
+	public List<Events> showByKeyword(String keyword){
+		
+		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&keyword=" +keyword;
+		
+		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
+		List<Events> ourList = response.getEmbedded().getEvents();
+		return ourList;
+		
+	}
 	
+	public List<Events> showByCity(String city){
+		
+		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&city=" +city;
+		
+		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
+		List<Events> ourList = response.getEmbedded().getEvents();
+		return ourList;
+		
+		
+	}
+	
+public List<Events> showByDate(String date){
+		
+		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&startDateTime=" +date +"T00:00:00Z";
+		
+		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
+		List<Events> ourList = response.getEmbedded().getEvents();
+		return ourList;
+		
+		
+	}
 }
