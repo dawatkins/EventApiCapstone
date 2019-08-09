@@ -30,6 +30,11 @@
 			</p>
 		</form>
 
+		<form action="/list">
+			<label for="start">Start date:</label> <input type="date" id="date"
+				name="date" value="2019-08-09" >
+				<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 	</div>
 </body>
 </html>

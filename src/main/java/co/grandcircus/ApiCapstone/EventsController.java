@@ -1,5 +1,7 @@
 package co.grandcircus.ApiCapstone;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +23,8 @@ public class EventsController {
 		Set<String> cities = new HashSet<>();
 		List<Events> allEvents = apiService.showAll();
 		
-		System.out.println(allEvents.size());
-		System.out.println(allEvents);
+		//System.out.println(allEvents.size());
+		//System.out.println(allEvents);
 		for (int i = 0; i < allEvents.size(); i++) {
 			cities.add(allEvents.get(i).getDetails().getVenues().get(0).getCity().getName());
 			
@@ -34,9 +36,10 @@ public class EventsController {
 	public ModelAndView showList(@RequestParam(value = "keyword", required = false) String keyword,
 			@RequestParam(value = "city", required = false) String city,
 			@RequestParam(value = "date", required = false) String date) {
-
+		
 		if ((keyword == null || keyword.isEmpty()) && (city == null || city.isEmpty())
 				&& (date == null || date.isEmpty())) {
+			System.out.println(date);
 			List<Events> allEvents = apiService.showAll();
 			return new ModelAndView("list", "events", allEvents);
 		} else if ((city == null || city.isEmpty()) && (date == null || date.isEmpty())) {

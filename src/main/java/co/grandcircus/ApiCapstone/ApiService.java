@@ -37,7 +37,7 @@ public class ApiService {
 	}
 	
 	public List<Events> showByKeyword(String keyword){
-		
+		System.out.println("show by keyword");
 		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&keyword=" +keyword;
 		
 		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
@@ -47,7 +47,7 @@ public class ApiService {
 	}
 	
 	public List<Events> showByCity(String city){
-		
+		System.out.println("show by city");
 		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&city=" +city;
 		
 		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
@@ -58,7 +58,7 @@ public class ApiService {
 	}
 	
 public List<Events> showByDate(String date){
-		
+		System.out.println("show by date");
 		String url = "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&startDateTime=" +date +"T00:00:00Z";
 		
 		EventResponse response = restTemplate.getForObject(url, EventResponse.class);
