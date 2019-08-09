@@ -11,22 +11,21 @@
 </head>
 <body>
 	<div class="container">
+	<h1><center>Events List</center></h1>
 		<table class="table">
 			<thead>
 				<tr>
 					<th>Name</th>
 					<th>Start Date</th>
 					<th>Venue Details</th>
-					<th>Ticket Master</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${events}" var="event">
 					<tr>
-						<td>${event.name}</td>
+						<td><a href="/details/${event.id}">${event.name}</a></td>
 						<td>${event.date}</td>
 						 <td>${event.details}</td>
-						 <td><a href=${ event.url }><button>Buy Tickets</button></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
